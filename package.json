@@ -6,7 +6,7 @@
   "scripts": {
     "test": "node tests/run-all.js",
     "test:unit": "node --test tests/unit/utils.test.js tests/unit/freshness-rules.test.js",
-    "test:lint": "markdownlint-cli2 \"docs/**/*.md\" \"labs/**/*.md\" \"README.md\" \"#docs/PLAN.md\" \"#docs/initial-prompt.md\" \"#docs/final-prompt-plan.md\" \"#docs/_research/**\"",
+    "test:lint": "markdownlint-cli2 \"docs/**/*.md\" \"labs/**/*.md\" \"README.md\"",
     "test:links": "node tests/validate-links.js",
     "test:spell": "cspell lint --no-progress \"docs/**/*.md\" \"labs/**/*.md\" \"README.md\"",
     "test:structure": "node tests/validate-structure.js",
@@ -15,7 +15,10 @@
     "test:mermaid": "node tests/validate-mermaid.js",
     "test:vbd-coverage": "node tests/validate-vbd-coverage.js",
     "test:lab-completeness": "node tests/validate-lab-completeness.js",
-    "test:freshness": "node tests/validate-freshness.js"
+    "test:freshness": "node tests/validate-freshness.js",
+    "deck:build": "node presentation/build.mjs",
+    "deck:qa": "node scripts/deck-qa.mjs",
+    "test:deck": "node tests/validate-deck.js"
   },
   "devDependencies": {
     "ajv": "^8.17.0",

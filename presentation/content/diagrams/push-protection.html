@@ -1,0 +1,42 @@
+<svg viewBox="0 0 1660 600" role="img" aria-labelledby="pp-title" xmlns="http://www.w3.org/2000/svg">
+  <title id="pp-title">Push protection flow: a developer pushes; GitHub scans the push for secret patterns; a match blocks the push and offers bypass reasons; a bypass is logged and creates an alert; clean pushes go through, and a ruleset rule can still block merging a pull request with unresolved alerts.</title>
+  <defs>
+    <marker id="pp-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-arrow-accent"/></marker>
+  </defs>
+  <g data-hl="dev">
+    <rect x="40" y="200" width="300" height="140" rx="22" class="d-box"/>
+    <text x="68" y="246" class="d-label">Developer</text>
+    <text x="68" y="290" class="d-text">git commit</text>
+    <text x="68" y="322" class="d-text">git push</text>
+  </g>
+  <path d="M340 270 H 420" class="d-line-accent" marker-end="url(#pp-arrow)"/>
+  <g data-hl="scan">
+    <rect x="430" y="170" width="360" height="200" rx="22" class="d-box-accent"/>
+    <text x="458" y="216" class="d-label">GitHub · at push time</text>
+    <text x="458" y="260" class="d-text">Scan every commit</text>
+    <text x="458" y="296" class="d-small">partner patterns, generic patterns,</text>
+    <text x="458" y="324" class="d-small">custom patterns, AI-detected secrets</text>
+    <text x="458" y="352" class="d-small">(the last three need Secret Protection)</text>
+  </g>
+  <path d="M790 230 C 860 230, 880 120, 960 120" class="d-line-accent" marker-end="url(#pp-arrow)"/>
+  <text x="950" y="100" text-anchor="end" class="d-label" style="fill: var(--red)">secret found</text>
+  <path d="M790 320 C 860 320, 880 440, 960 440" class="d-line-accent" marker-end="url(#pp-arrow)"/>
+  <text x="840" y="490" class="d-label" style="fill: var(--green)">clean</text>
+
+  <g data-hl="blocked">
+    <rect x="970" y="40" width="650" height="220" rx="22" class="d-box-orange"/>
+    <text x="998" y="86" class="d-label">Push blocked</text>
+    <text x="998" y="128" class="d-text">Remove the secret and push again, or bypass:</text>
+    <text x="998" y="164" class="d-small">"It's used in tests" · "It's a false positive" · "I'll fix it later"</text>
+    <text x="998" y="200" class="d-small">Owners can remove reasons, or require delegated bypass:</text>
+    <text x="998" y="228" class="d-small">a reviewer team approves. Every bypass is audit-logged and raises an alert.</text>
+  </g>
+  <g data-hl="clean">
+    <rect x="970" y="360" width="650" height="200" rx="22" class="d-box-green"/>
+    <text x="998" y="406" class="d-label">Push accepted</text>
+    <text x="998" y="448" class="d-text">Still watched after the push</text>
+    <text x="998" y="484" class="d-small">Secret scanning alerts on the repository and the organization overview.</text>
+    <text x="998" y="512" class="d-small">Ruleset rule "Require secret scanning alerts are resolved" blocks merging</text>
+    <text x="998" y="540" class="d-small">a pull request that introduced unresolved alerts (preview since 2026-09-09).</text>
+  </g>
+</svg>

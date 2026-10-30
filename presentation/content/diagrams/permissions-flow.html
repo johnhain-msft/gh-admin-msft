@@ -1,0 +1,90 @@
+<svg viewBox="0 0 1660 720" role="img" aria-labelledby="pf-title" xmlns="http://www.w3.org/2000/svg">
+  <title id="pf-title">Permission flow: enterprise policies constrain organization settings, which constrain repository settings. Roles exist at each level; enterprise teams and collaborators feed into them.</title>
+  <defs>
+    <marker id="pf-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-arrow"/></marker>
+    <marker id="pf-arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-arrow-accent"/></marker>
+  </defs>
+
+  <!-- tiers -->
+  <g data-hl="enterprise">
+    <rect x="40" y="30" width="520" height="190" rx="18" class="d-box-accent"/>
+    <text x="70" y="78" class="d-label">Enterprise</text>
+    <text x="70" y="118" class="d-text">Policies</text>
+    <text x="70" y="152" class="d-sub">Enforce one value for every organization,</text>
+    <text x="70" y="180" class="d-sub">or leave it to organization owners. None enforced by default.</text>
+  </g>
+  <g data-hl="org">
+    <rect x="40" y="270" width="520" height="190" rx="18" class="d-box"/>
+    <text x="70" y="318" class="d-label">Organization</text>
+    <text x="70" y="358" class="d-text">Settings</text>
+    <text x="70" y="392" class="d-sub">Base permissions, member privileges, security,</text>
+    <text x="70" y="420" class="d-sub">Actions. Can add restrictions, cannot weaken enterprise ones.</text>
+  </g>
+  <g data-hl="repo">
+    <rect x="40" y="510" width="520" height="180" rx="18" class="d-box"/>
+    <text x="70" y="558" class="d-label">Repository</text>
+    <text x="70" y="598" class="d-text">Settings</text>
+    <text x="70" y="632" class="d-sub">Features, access, rulesets, Advanced Security.</text>
+    <text x="70" y="660" class="d-sub">Inherits from the organization and the enterprise.</text>
+  </g>
+  <path d="M300 220 V268" class="d-line-accent" marker-end="url(#pf-arrow-accent)"/>
+  <path d="M300 460 V508" class="d-line-accent" marker-end="url(#pf-arrow-accent)"/>
+  <text x="318" y="252" class="d-small">constrains</text>
+  <text x="318" y="492" class="d-small">constrains</text>
+
+  <!-- roles -->
+  <g data-hl="enterprise">
+    <rect x="640" y="30" width="430" height="190" rx="18" class="d-box"/>
+    <text x="668" y="72" class="d-label">Enterprise roles</text>
+    <text x="668" y="110" class="d-small">Enterprise owner · Billing manager · App manager</text>
+    <text x="668" y="140" class="d-small">Security manager (preview) · Custom enterprise roles</text>
+    <text x="668" y="176" class="d-small">Members: organization members and unaffiliated users;</text>
+    <text x="668" y="204" class="d-small">guest collaborators (EMU only)</text>
+  </g>
+  <g data-hl="org">
+    <rect x="640" y="270" width="430" height="190" rx="18" class="d-box"/>
+    <text x="668" y="312" class="d-label">Organization roles</text>
+    <text x="668" y="350" class="d-small">Owner · Member · Moderator · Billing manager</text>
+    <text x="668" y="380" class="d-small">Security manager · GitHub App manager · CI/CD admin</text>
+    <text x="668" y="416" class="d-small">Custom organization roles, which the enterprise</text>
+    <text x="668" y="444" class="d-small">can define once for every organization</text>
+  </g>
+  <g data-hl="repo">
+    <rect x="640" y="510" width="430" height="180" rx="18" class="d-box"/>
+    <text x="668" y="552" class="d-label">Repository roles</text>
+    <text x="668" y="592" class="d-text">Read · Triage · Write · Maintain · Admin</text>
+    <text x="668" y="628" class="d-small">plus custom repository roles (up to five per organization)</text>
+    <text x="668" y="662" class="d-small">granted to teams, or to individuals directly</text>
+  </g>
+
+  <!-- feeders -->
+  <g data-hl="teams">
+    <rect x="1160" y="150" width="460" height="200" rx="18" class="d-box-purple"/>
+    <text x="1188" y="192" class="d-label">Enterprise teams</text>
+    <text x="1188" y="230" class="d-small">Defined once at the enterprise, assigned to</text>
+    <text x="1188" y="258" class="d-small">organizations, roles, Copilot licenses, cost centers</text>
+    <text x="1188" y="286" class="d-small">and ruleset bypass lists. Membership from the IdP</text>
+    <text x="1188" y="314" class="d-small">with EMU. GA since 2026-06-04.</text>
+  </g>
+  <path d="M1160 290 C 1120 290, 1110 365, 1070 365" class="d-line-dashed" marker-end="url(#pf-arrow)"/>
+  <text x="1092" y="310" class="d-small">assigned</text>
+
+  <g data-hl="teams">
+    <rect x="1160" y="400" width="220" height="130" rx="18" class="d-box"/>
+    <text x="1186" y="440" class="d-label">Org teams</text>
+    <text x="1186" y="474" class="d-small">nested, CODEOWNERS,</text>
+    <text x="1186" y="502" class="d-small">team sync / SCIM</text>
+  </g>
+  <g data-hl="collab">
+    <rect x="1400" y="400" width="220" height="130" rx="18" class="d-box"/>
+    <text x="1426" y="440" class="d-label">Collaborators</text>
+    <text x="1426" y="474" class="d-small">outside collaborators,</text>
+    <text x="1426" y="502" class="d-small">or repository collaborators (EMU)</text>
+  </g>
+  <path d="M1270 530 C 1270 600, 1120 600, 1070 600" class="d-line" marker-end="url(#pf-arrow)"/>
+  <text x="1290" y="586" class="d-small">team permissions</text>
+  <path d="M1510 530 C 1510 650, 1130 650, 1070 650" class="d-line" marker-end="url(#pf-arrow)"/>
+  <text x="1180" y="676" class="d-small">individual access</text>
+
+  <text x="1160" y="100" class="d-sub">Hover or focus any box to trace one level.</text>
+</svg>

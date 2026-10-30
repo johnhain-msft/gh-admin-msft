@@ -1,0 +1,54 @@
+<svg viewBox="0 0 1660 700" role="img" aria-labelledby="nt-title" xmlns="http://www.w3.org/2000/svg">
+  <title id="nt-title">Nested teams: a parent team's repository permissions and mentions flow down to child teams; nothing flows back up; a child can itself be a parent.</title>
+  <defs>
+    <marker id="nt-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-arrow-accent"/></marker>
+  </defs>
+
+  <g class="fragment">
+    <rect x="630" y="40" width="400" height="120" rx="60" class="d-box-accent"/>
+    <text x="700" y="92" class="d-text">@org/engineering</text>
+    <text x="700" y="126" class="d-small">parent · Read on every product repo</text>
+  </g>
+
+  <g class="fragment">
+    <path d="M760 160 C 700 240, 420 220, 330 290" class="d-line-accent" marker-end="url(#nt-arrow)"/>
+    <path d="M830 160 V 290" class="d-line-accent" marker-end="url(#nt-arrow)"/>
+    <path d="M900 160 C 960 240, 1240 220, 1330 290" class="d-line-accent" marker-end="url(#nt-arrow)"/>
+    <text x="1290" y="190" class="d-label">permissions and</text>
+    <text x="1290" y="218" class="d-label">notifications flow down</text>
+
+    <rect x="130" y="300" width="400" height="120" rx="60" class="d-box-green"/>
+    <text x="190" y="352" class="d-text">@org/engineering-frontend</text>
+    <text x="190" y="386" class="d-small">child · Write on blue/web</text>
+
+    <rect x="630" y="300" width="400" height="120" rx="60" class="d-box-green"/>
+    <text x="690" y="352" class="d-text">@org/engineering-backend</text>
+    <text x="690" y="386" class="d-small">child · Write on blue/api</text>
+
+    <rect x="1130" y="300" width="400" height="120" rx="60" class="d-box-green"/>
+    <text x="1190" y="352" class="d-text">@org/engineering-platform</text>
+    <text x="1190" y="386" class="d-small">child, and a parent itself</text>
+  </g>
+
+  <g class="fragment">
+    <path d="M1260 420 C 1230 480, 1120 480, 1100 540" class="d-line-accent" marker-end="url(#nt-arrow)"/>
+    <path d="M1400 420 C 1430 480, 1540 480, 1560 540" class="d-line-accent" marker-end="url(#nt-arrow)"/>
+    <rect x="930" y="550" width="340" height="110" rx="55" class="d-box"/>
+    <text x="980" y="600" class="d-text">@org/platform-sre</text>
+    <text x="980" y="632" class="d-small">grandchild · inherits the parent chain</text>
+    <rect x="1300" y="550" width="340" height="110" rx="55" class="d-box"/>
+    <text x="1350" y="600" class="d-text">@org/platform-infra</text>
+    <text x="1350" y="632" class="d-small">one parent each, many children per parent</text>
+  </g>
+
+  <g class="fragment">
+    <path d="M330 420 C 360 520, 560 540, 600 540" class="d-line-dashed"/>
+    <line x1="588" y1="516" x2="636" y2="564" class="d-line" style="stroke: var(--red); stroke-width: 6"/>
+    <line x1="636" y1="516" x2="588" y2="564" class="d-line" style="stroke: var(--red); stroke-width: 6"/>
+    <text x="130" y="520" class="d-text" style="fill: var(--red)">✕ nothing flows up</text>
+    <text x="130" y="556" class="d-small">A child team's Write never reaches the parent.</text>
+    <text x="130" y="586" class="d-small">Child members appear on the parent's Members tab,</text>
+    <text x="130" y="616" class="d-small">but are not direct members of it.</text>
+    <text x="130" y="662" class="d-small">Secret teams and enterprise teams cannot be nested.</text>
+  </g>
+</svg>

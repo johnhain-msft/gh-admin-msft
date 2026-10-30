@@ -1,0 +1,17 @@
+<div class="diagram-html decision" data-decision>
+  <script type="application/json">{
+    "start": { "q": "Will this run only as you, on your own machine?", "hint": "Scripts, local debugging, one-off API calls.", "yes": "simple", "no": "act" },
+    "simple": { "q": "Is it simple and short-lived?", "hint": "A few calls, no service, no shared credential.", "yes": "pat", "no": "ghapp-user" },
+    "act": { "q": "Does it need to act as its own identity, not as a person?", "hint": "Bots, CI, automation that outlives any one employee.", "yes": "ghapp", "no": "user" },
+    "user": { "q": "Does it need to act on behalf of a signed-in user?", "hint": "Dashboards, IDE integrations, anything that shows a person their own data.", "yes": "ghapp-user", "no": "oauth" },
+    "pat": { "result": "Fine-grained personal access token", "why": "Personal use only. Scope it to the repositories and permissions it needs, set an expiry, authorize it for SSO organizations. Never share it with a service." },
+    "ghapp": { "result": "GitHub App · installation token", "why": "Recommended. Fine-grained permissions, no license consumed, 15,000 requests an hour on Enterprise Cloud, short-lived ghs_ tokens. In Actions, prefer GITHUB_TOKEN when the workflow's own repository is enough." },
+    "ghapp-user": { "result": "GitHub App · user access token", "why": "The app acts for the user with ghu_ tokens that expire in 8 hours and ghr_ refresh tokens. You get app-level permissions and installation control." },
+    "oauth": { "result": "OAuth App", "why": "Only when you need something a GitHub App cannot do, such as enterprise-level resources or an identity-provider style sign-in. GitHub's docs: in general, GitHub Apps are preferred over OAuth apps." }
+  }</script>
+  <div class="decision-q" data-dq></div>
+  <div>
+    <div class="decision-actions" data-dactions></div>
+    <ol class="decision-path" data-dpath aria-label="Path taken"></ol>
+  </div>
+</div>

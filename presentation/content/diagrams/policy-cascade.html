@@ -1,0 +1,36 @@
+<svg viewBox="0 0 1660 640" role="img" aria-labelledby="pc-title" xmlns="http://www.w3.org/2000/svg">
+  <title id="pc-title">Policy cascade: an enterprise policy is enforced, not set, or disabled; organizations and repositories can add restrictions but never relax one set above them.</title>
+  <defs>
+    <marker id="pc-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-arrow-accent"/></marker>
+  </defs>
+
+  <rect x="40" y="40" width="1580" height="150" rx="20" class="d-box-accent"/>
+  <text x="70" y="86" class="d-label">Enterprise policy · three states</text>
+  <g data-hl="enforced">
+    <rect x="70" y="106" width="480" height="64" rx="14" class="d-box-green"/>
+    <text x="96" y="147" class="d-text">Enforced</text>
+    <text x="250" y="147" class="d-small">one value, every organization, no override</text>
+  </g>
+  <g data-hl="notset">
+    <rect x="580" y="106" width="500" height="64" rx="14" class="d-box"/>
+    <text x="606" y="147" class="d-text">No policy</text>
+    <text x="780" y="147" class="d-small">each organization owner decides (the default)</text>
+  </g>
+  <g data-hl="disabled">
+    <rect x="1110" y="106" width="480" height="64" rx="14" class="d-box-orange"/>
+    <text x="1136" y="147" class="d-text">Disabled</text>
+    <text x="1290" y="147" class="d-small">no organization can turn it on</text>
+  </g>
+
+  <path d="M830 190 V 250" class="d-line-accent" marker-end="url(#pc-arrow)"/>
+  <rect x="240" y="260" width="1180" height="130" rx="20" class="d-box"/>
+  <text x="270" y="306" class="d-label">Organization</text>
+  <text x="270" y="346" class="d-text">Can add restrictions. Cannot weaken an enforced value.</text>
+  <text x="270" y="376" class="d-small">Example: enterprise enforces "no public repositories" → an organization owner cannot allow them.</text>
+
+  <path d="M830 390 V 450" class="d-line-accent" marker-end="url(#pc-arrow)"/>
+  <rect x="440" y="460" width="780" height="130" rx="20" class="d-box"/>
+  <text x="470" y="506" class="d-label">Repository</text>
+  <text x="470" y="546" class="d-text">Can add again. Rulesets layer: the strictest combination wins.</text>
+  <text x="470" y="576" class="d-small">Settings a repository admin cannot see are usually set, and locked, one level up.</text>
+</svg>

@@ -1,0 +1,67 @@
+<svg viewBox="0 0 1660 740" role="img" aria-labelledby="hy-title" xmlns="http://www.w3.org/2000/svg">
+  <title id="hy-title">Everything exists inside the enterprise: organizations with their own namespaces own repositories and teams; people keep their own accounts and join organizations; SSO protects the organization content.</title>
+  <defs>
+    <marker id="hy-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-arrow"/></marker>
+  </defs>
+
+  <!-- enterprise frame -->
+  <g>
+    <rect x="30" y="30" width="1600" height="680" rx="26" class="d-box-dashed"/>
+    <text x="64" y="76" class="d-label">Enterprise · github.com/enterprises/SLUG</text>
+    <text x="64" y="106" class="d-sub">Owners, policies, licenses, billing, audit log, enterprise teams</text>
+    <text x="1216" y="660" class="d-small">Unaffiliated: in the enterprise, in no organization,</text>
+    <text x="1216" y="686" class="d-small">no license by default.</text>
+  </g>
+
+  <!-- organizations -->
+  <g class="fragment">
+    <rect x="80" y="140" width="700" height="420" rx="22" class="d-box-accent"/>
+    <text x="110" y="184" class="d-label">Organization · blue</text>
+    <text x="110" y="214" class="d-sub">Own namespace, settings, roles and teams. Inherits enterprise policies.</text>
+    <rect x="820" y="140" width="700" height="420" rx="22" class="d-box-purple"/>
+    <text x="850" y="184" class="d-label">Organization · purple</text>
+    <text x="850" y="214" class="d-sub">A second silo: separate settings, separate @-mentions, separate search.</text>
+  </g>
+
+  <!-- repositories -->
+  <g class="fragment">
+    <g data-hl="repo-blue">
+      <rect x="110" y="250" width="200" height="110" rx="14" class="d-box"/><text x="130" y="290" class="d-text">blue/api</text><text x="130" y="322" class="d-small">internal</text>
+      <rect x="330" y="250" width="200" height="110" rx="14" class="d-box"/><text x="350" y="290" class="d-text">blue/web</text><text x="350" y="322" class="d-small">private</text>
+      <rect x="550" y="250" width="200" height="110" rx="14" class="d-box"/><text x="570" y="290" class="d-text">blue/docs</text><text x="570" y="322" class="d-small">public</text>
+    </g>
+    <g data-hl="repo-purple">
+      <rect x="850" y="250" width="200" height="110" rx="14" class="d-box"/><text x="870" y="290" class="d-text">purple/data</text><text x="870" y="322" class="d-small">private</text>
+      <rect x="1070" y="250" width="200" height="110" rx="14" class="d-box"/><text x="1090" y="290" class="d-text">purple/ml</text><text x="1090" y="322" class="d-small">internal</text>
+    </g>
+    <text x="110" y="400" class="d-sub">Repositories belong to the organization.</text>
+    <text x="850" y="400" class="d-sub">Visibility plus base permission decides who sees them.</text>
+  </g>
+
+  <!-- teams -->
+  <g class="fragment">
+    <rect x="110" y="430" width="300" height="100" rx="50" class="d-box-green"/><text x="150" y="472" class="d-text">@blue/java</text><text x="150" y="502" class="d-small">write on blue/api</text>
+    <rect x="430" y="430" width="320" height="100" rx="50" class="d-box-green"/><text x="470" y="472" class="d-text">@blue/security</text><text x="470" y="502" class="d-small">CODEOWNERS, reviews</text>
+    <rect x="850" y="430" width="300" height="100" rx="50" class="d-box-green"/><text x="890" y="472" class="d-text">@purple/java</text><text x="890" y="502" class="d-small">write on purple/ml</text>
+    <rect x="1190" y="430" width="320" height="100" rx="50" class="d-box-purple"/><text x="1222" y="472" class="d-text">@purple/ent:sre</text><text x="1222" y="502" class="d-small">enterprise team, assigned here too</text>
+  </g>
+
+  <!-- people -->
+  <g class="fragment">
+    <g data-hl="people">
+      <circle cx="140" cy="640" r="34" class="d-box"/><text x="196" y="634" class="d-text">ana</text><text x="196" y="660" class="d-small">member of blue and purple · one license</text>
+      <circle cx="640" cy="640" r="34" class="d-box"/><text x="696" y="634" class="d-text">ben</text><text x="696" y="660" class="d-small">outside collaborator on blue/web · one license</text>
+      <circle cx="1160" cy="640" r="34" class="d-box"/><text x="1216" y="634" class="d-text">chen</text>
+    </g>
+    <path d="M160 606 C 200 560, 220 560, 260 530" class="d-line" marker-end="url(#hy-arrow)"/>
+    <path d="M165 606 C 500 560, 700 560, 940 530" class="d-line" marker-end="url(#hy-arrow)"/>
+    <path d="M660 606 C 640 540, 520 460, 440 362" class="d-line-dashed" marker-end="url(#hy-arrow)"/>
+  </g>
+
+  <!-- SSO -->
+  <g class="fragment">
+    <rect x="1040" y="40" width="580" height="86" rx="14" class="d-box-orange"/>
+    <text x="1064" y="76" class="d-text">🔐 SAML or OIDC single sign-on</text>
+    <text x="1064" y="108" class="d-small">Enforced at the enterprise, it covers every organization.</text>
+  </g>
+</svg>

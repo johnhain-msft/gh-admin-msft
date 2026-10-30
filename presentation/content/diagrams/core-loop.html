@@ -1,0 +1,52 @@
+<svg viewBox="0 0 1660 700" role="img" aria-labelledby="cl-title" xmlns="http://www.w3.org/2000/svg">
+  <title id="cl-title">Core integration loop: operations in GitHub fire events to integrations through webhooks, GitHub Apps and Actions; integrations call the REST or GraphQL API; those requests change GitHub and fire new events.</title>
+  <defs>
+    <marker id="cl-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-arrow-accent"/></marker>
+  </defs>
+
+  <g data-hl="github">
+    <rect x="60" y="200" width="420" height="300" rx="24" class="d-box-accent"/>
+    <text x="92" y="246" class="d-label">GitHub</text>
+    <text x="92" y="290" class="d-text">Enterprise · organization · repository</text>
+    <text x="92" y="330" class="d-small">push · pull request · issue · release</text>
+    <text x="92" y="360" class="d-small">membership · settings · security alert</text>
+    <text x="92" y="410" class="d-sub">Every operation is an event.</text>
+    <text x="92" y="440" class="d-sub">Every event can start automation.</text>
+  </g>
+
+  <path d="M480 290 C 600 290, 640 220, 760 220" class="d-line-accent" marker-end="url(#cl-arrow)"/>
+  <text x="520" y="200" class="d-label">Events</text>
+  <text x="520" y="236" class="d-small">Webhooks (repo, org, enterprise)</text>
+  <text x="520" y="262" class="d-small">GitHub Apps · Actions workflows</text>
+
+  <g data-hl="integrations">
+    <rect x="760" y="140" width="480" height="420" rx="24" class="d-box-green"/>
+    <text x="792" y="186" class="d-label">Integrations</text>
+    <text x="792" y="230" class="d-text">Scripts and the gh CLI</text>
+    <text x="792" y="270" class="d-text">GUI clients</text>
+    <text x="792" y="310" class="d-text">Third-party systems</text>
+    <text x="792" y="350" class="d-text">Web servers and serverless functions</text>
+    <text x="792" y="390" class="d-text">Workflows in .github/workflows</text>
+    <text x="792" y="440" class="d-sub">A webhook arrives as an HTTP POST to your endpoint.</text>
+    <text x="792" y="470" class="d-sub">Validate the HMAC signature, queue the work,</text>
+    <text x="792" y="500" class="d-sub">answer 2xx fast.</text>
+  </g>
+
+  <path d="M1240 350 H 1340" class="d-line-accent" marker-end="url(#cl-arrow)"/>
+  <text x="1250" y="330" class="d-label">Requests</text>
+
+  <g data-hl="api">
+    <rect x="1350" y="200" width="270" height="300" rx="24" class="d-box-purple"/>
+    <text x="1378" y="246" class="d-label">GitHub API</text>
+    <text x="1378" y="290" class="d-text">REST</text>
+    <text x="1378" y="320" class="d-small">calendar versions</text>
+    <text x="1378" y="346" class="d-small d-mono">2022-11-28 · 2026-03-10</text>
+    <text x="1378" y="400" class="d-text">GraphQL</text>
+    <text x="1378" y="430" class="d-small">POST /graphql</text>
+    <text x="1378" y="456" class="d-small">one query, nested data</text>
+  </g>
+
+  <path d="M1480 500 C 1480 640, 300 640, 270 500" class="d-line-accent" marker-end="url(#cl-arrow)"/>
+  <text x="620" y="628" class="d-label">Changes fire new events</text>
+  <text x="620" y="660" class="d-small">The loop closes: automation that writes to GitHub triggers more automation. Design for it.</text>
+</svg>

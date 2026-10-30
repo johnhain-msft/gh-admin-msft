@@ -1,0 +1,52 @@
+{
+  "title": "GitHub Enterprise Cloud Administration",
+  "subtitle": "Level 300 · two days · three hours a day · remote",
+  "baseTz": "America/Chicago",
+  "baseTzLabel": "Central (US)",
+  "days": [
+    {
+      "day": 1,
+      "label": "Day 1",
+      "title": "Enterprise, organization and governance",
+      "date": "2026-11-16",
+      "blocks": [
+        { "type": "session", "start": "09:00", "minutes": 10, "title": "Welcome, objectives and agenda", "slides": ["cover", "welcome", "objectives", "agenda"] },
+        { "type": "session", "start": "09:10", "minutes": 5, "title": "Environment check", "detail": "gh auth status, git, the workshop organization name", "slides": ["setup"] },
+        { "type": "session", "start": "09:15", "minutes": 20, "title": "Enterprise overview", "detail": "Platforms, data residency, EMU, GHES, plans, pay per use, billing management", "slides": ["sec-enterprise", "platforms", "ghec", "emu", "ghes", "plans", "pay-per-use", "billing-mgmt"] },
+        { "type": "session", "start": "09:35", "minutes": 15, "title": "Permission flow", "detail": "Enterprise, organization and repository roles; visibility; base permissions", "slides": ["sec-permissions", "permissions-flow", "multi-org", "enterprise-teams", "visibility", "base-permissions", "repo-roles"] },
+        { "type": "session", "start": "09:50", "minutes": 15, "title": "Enterprise administration", "detail": "Settings walkthrough, AI controls, Copilot policies and seats", "slides": ["sec-enterprise-admin", "enterprise-walkthrough", "ai-controls", "copilot-policies", "copilot-seats"] },
+        { "type": "lab", "start": "10:05", "minutes": 15, "title": "Lab 15 · Copilot governance configuration", "slides": ["lab15"] },
+        { "type": "break", "start": "10:20", "minutes": 10, "title": "Break", "slides": ["break1"] },
+        { "type": "session", "start": "10:30", "minutes": 15, "title": "Organization overview", "detail": "Namespaces, users and licenses, SSO and credentials, best practices", "slides": ["sec-orgs", "hierarchy", "users-namespaces", "sso-credentials", "org-best-practices"] },
+        { "type": "session", "start": "10:45", "minutes": 15, "title": "Organization administration", "detail": "Teams, nested teams, team sync, settings walkthrough, insights, Security & quality", "slides": ["teams-why", "nested-teams", "team-sync", "org-walkthrough", "insights", "security-quality"] },
+        { "type": "lab", "start": "11:00", "minutes": 20, "title": "Lab 9 · User and team administration", "slides": ["lab09"] },
+        { "type": "session", "start": "11:20", "minutes": 10, "title": "Audit log and dormant users", "slides": ["audit-overview", "audit-streaming", "dormant-users"] },
+        { "type": "lab", "start": "11:30", "minutes": 20, "title": "Lab 8 · Audit log exploration", "slides": ["lab08"] },
+        { "type": "discussion", "start": "11:50", "minutes": 10, "title": "Knowledge check, wrap-up and Day 2 preview", "slides": ["day1-quiz", "day1-wrap"] }
+      ]
+    },
+    {
+      "day": 2,
+      "label": "Day 2",
+      "title": "Repository, security, API and advanced topics",
+      "date": "2026-11-17",
+      "blocks": [
+        { "type": "session", "start": "09:00", "minutes": 5, "title": "Welcome back and Day 1 recap", "slides": ["day2-welcome"] },
+        { "type": "session", "start": "09:05", "minutes": 15, "title": "Repository governance", "detail": "Landing page, settings walkthrough, templates as governance", "slides": ["sec-repos", "repo-landing", "repo-settings", "templates-governance"] },
+        { "type": "lab", "start": "09:20", "minutes": 10, "title": "Lab 4 · GitHub templates", "slides": ["lab04"] },
+        { "type": "session", "start": "09:30", "minutes": 15, "title": "Rulesets deep dive", "detail": "Rulesets vs branch protection, anatomy, org vs repo, what changed in 2026", "slides": ["sec-rulesets", "rulesets-vs-bp", "ruleset-anatomy", "org-vs-repo-rulesets", "rulesets-2026"] },
+        { "type": "lab", "start": "09:45", "minutes": 15, "title": "Lab 3 · Repository rulesets", "slides": ["lab03"] },
+        { "type": "lab", "start": "10:00", "minutes": 15, "title": "Lab 6 · Advanced repository rulesets", "slides": ["lab06"] },
+        { "type": "break", "start": "10:15", "minutes": 10, "title": "Break", "slides": ["break2"] },
+        { "type": "session", "start": "10:25", "minutes": 15, "title": "Security in the cloud", "detail": "Products, push protection, code scanning and Dependabot, security configurations, cost model", "slides": ["sec-security", "security-products", "push-protection", "code-scanning-dependabot", "security-configurations", "ghas-cost"] },
+        { "type": "lab", "start": "10:40", "minutes": 20, "title": "Lab 7 · Security scanning and push protection", "slides": ["lab07"] },
+        { "type": "session", "start": "11:00", "minutes": 10, "title": "API and authentication", "detail": "Core integration loop, REST and GraphQL, credentials, which access method", "slides": ["sec-api", "core-loop", "rest-graphql", "credentials", "auth-decision"] },
+        { "type": "lab", "start": "11:10", "minutes": 15, "title": "Lab 5 · GitHub API with REST and GraphQL", "slides": ["lab05"] },
+        { "type": "session", "start": "11:25", "minutes": 10, "title": "Actions, automation and Marketplace", "detail": "Runners, policies and supply-chain controls, sharing workflows, gh CLI patterns, Marketplace", "slides": ["sec-actions", "runners", "actions-policies", "sharing-workflows", "gh-cli-automation", "marketplace"] },
+        { "type": "lab", "start": "11:35", "minutes": 15, "title": "Lab 13 · Scripts and gh CLI automation", "slides": ["lab13"] },
+        { "type": "session", "start": "11:50", "minutes": 5, "title": "Privacy, licenses and repository health", "slides": ["privacy-licenses-health"] },
+        { "type": "discussion", "start": "11:55", "minutes": 5, "title": "Top five, extension labs, resources, Q&A", "slides": ["top5", "extension-labs", "day2-quiz", "resources", "qa", "thanks"] }
+      ]
+    }
+  ]
+}

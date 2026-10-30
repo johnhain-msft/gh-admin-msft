@@ -1,0 +1,60 @@
+<svg viewBox="0 0 1660 560" role="img" aria-labelledby="ra-title" xmlns="http://www.w3.org/2000/svg">
+  <title id="ra-title">Ruleset anatomy: targets choose branches or tags, rules say what is enforced, bypass actors are the named exceptions, and enforcement status is active, evaluate or disabled.</title>
+  <defs>
+    <marker id="ra-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-arrow-accent"/></marker>
+  </defs>
+  <g data-hl="targets">
+    <rect x="30" y="60" width="370" height="440" rx="22" class="d-box-accent"/>
+    <text x="58" y="106" class="d-label">1 · Targets</text>
+    <text x="58" y="150" class="d-text">Which refs, which repos</text>
+    <text x="58" y="196" class="d-small">Branches: default, by pattern (release/**),</text>
+    <text x="58" y="224" class="d-small">all (~ALL)</text>
+    <text x="58" y="262" class="d-small">Tags: v*, release-*</text>
+    <text x="58" y="300" class="d-small">Pushes: file paths and sizes</text>
+    <text x="58" y="346" class="d-small">Org rulesets add repository targets:</text>
+    <text x="58" y="374" class="d-small">all, by name pattern, by custom property</text>
+    <text x="58" y="402" class="d-small">(deployable:true, business unit…)</text>
+  </g>
+  <path d="M400 280 H 440" class="d-line-accent" marker-end="url(#ra-arrow)"/>
+  <g data-hl="rules">
+    <rect x="450" y="60" width="370" height="440" rx="22" class="d-box-green"/>
+    <text x="478" y="106" class="d-label">2 · Rules</text>
+    <text x="478" y="150" class="d-text">What is enforced</text>
+    <text x="478" y="196" class="d-small">Require a pull request, N approvals,</text>
+    <text x="478" y="224" class="d-small">code owner review, required reviewers</text>
+    <text x="478" y="262" class="d-small">Required status checks, workflows</text>
+    <text x="478" y="300" class="d-small">Signed commits, linear history</text>
+    <text x="478" y="338" class="d-small">Block force pushes, deletions, creations</text>
+    <text x="478" y="376" class="d-small">Secret scanning alerts resolved (preview)</text>
+    <text x="478" y="414" class="d-small">Code coverage thresholds</text>
+  </g>
+  <path d="M820 280 H 860" class="d-line-accent" marker-end="url(#ra-arrow)"/>
+  <g data-hl="bypass">
+    <rect x="870" y="60" width="370" height="440" rx="22" class="d-box-orange"/>
+    <text x="898" y="106" class="d-label">3 · Bypass list</text>
+    <text x="898" y="150" class="d-text">Named exceptions</text>
+    <text x="898" y="196" class="d-small">Roles: repository admin, maintain</text>
+    <text x="898" y="224" class="d-small">Organization and enterprise teams</text>
+    <text x="898" y="252" class="d-small">GitHub Apps, deploy keys</text>
+    <text x="898" y="280" class="d-small">Individual users (since 2026-05-07)</text>
+    <text x="898" y="326" class="d-text">Modes</text>
+    <text x="898" y="360" class="d-small">Always · For pull requests only</text>
+    <text x="898" y="388" class="d-small">Exempt (API only: rules do not run,</text>
+    <text x="898" y="416" class="d-small">no insight entry. Review these.)</text>
+    <text x="898" y="460" class="d-small">Every Always / PR-only bypass is logged.</text>
+  </g>
+  <path d="M1240 280 H 1280" class="d-line-accent" marker-end="url(#ra-arrow)"/>
+  <g data-hl="enforcement">
+    <rect x="1290" y="60" width="340" height="440" rx="22" class="d-box-purple"/>
+    <text x="1318" y="106" class="d-label">4 · Enforcement</text>
+    <text x="1318" y="150" class="d-text">Active</text>
+    <text x="1318" y="180" class="d-small">blocks what the rules forbid</text>
+    <text x="1318" y="230" class="d-text">Evaluate</text>
+    <text x="1318" y="260" class="d-small">dry run on real traffic;</text>
+    <text x="1318" y="288" class="d-small">results in Rule insights</text>
+    <text x="1318" y="338" class="d-text">Disabled</text>
+    <text x="1318" y="368" class="d-small">kept, not applied</text>
+    <text x="1318" y="420" class="d-small">Rule insights dashboards GA</text>
+    <text x="1318" y="448" class="d-small">since 2026-08-25.</text>
+  </g>
+</svg>

@@ -1,0 +1,20 @@
+<div class="diagram-html" data-bp="none">
+  <div class="bp-controls">
+    <span>Base permission:</span>
+    <button type="button" class="btn" data-base="none" aria-pressed="true">No permission</button>
+    <button type="button" class="btn" data-base="read" aria-pressed="false">Read</button>
+    <button type="button" class="btn" data-base="write" aria-pressed="false">Write / Admin</button>
+  </div>
+  <div class="bp-grid" role="table" aria-label="Which repositories every organization member can reach, by visibility and base permission">
+    <div class="bp-head" role="columnheader"></div>
+    <div class="bp-head" role="columnheader">Public</div>
+    <div class="bp-head" role="columnheader">Internal</div>
+    <div class="bp-head" role="columnheader">Private</div>
+    <div class="bp-row-label" role="rowheader">Every member reaches…</div>
+    <div class="bp-cell" data-cell="public" role="cell"><span class="bp-icon" aria-hidden="true">●</span><span class="bp-text">Every member</span></div>
+    <div class="bp-cell" data-cell="internal" role="cell"><span class="bp-icon" aria-hidden="true">●</span><span class="bp-text">Every member</span></div>
+    <div class="bp-cell" data-cell="private" role="cell"><span class="bp-icon" aria-hidden="true">◌</span><span class="bp-text">Team, direct access or role</span></div>
+  </div>
+  <p class="bp-note" data-bp-note></p>
+  <p class="aside">● every member · ◌ only through a team, direct access or an organization role. Base permissions never apply to outside collaborators.</p>
+</div>
