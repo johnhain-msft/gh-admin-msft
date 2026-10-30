@@ -1,0 +1,12 @@
+node_modules/
+*.log
+.DS_Store
+Thumbs.db
+# local run artifacts from the labs
+dormant-report.csv
+active-users.txt
+audit-export-*.json
+# visual QA screenshots are regenerated, not committed
+presentation/qa/*.png
+# large binaries never belong here
+*.pptx
