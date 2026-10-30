@@ -7,6 +7,7 @@ node presentation/build.mjs          # build dist/index.html and presenter/PRESE
 node presentation/build.mjs --check  # validate only
 node scripts/deck-qa.mjs             # screenshot every slide into presentation/qa/ and flag overflow
 node scripts/deck-qa.mjs --speaker   # screenshot the overlays and the speaker window
+node scripts/deck-live-edge.mjs      # Windows + Edge: rehearse on the real screen with real key presses and capture it
 ```
 
 ## Presenting
@@ -17,8 +18,8 @@ Open `dist/index.html`. The deck remembers theme, time zone and the notes font s
 |---|---|
 | `→` `Space` `PgDn` / `←` `PgUp` | next or previous step; a slide with staged reveals takes several presses |
 | `Home` / `End`, digits then `Enter` | first or last slide, or jump to a number |
-| `S` | open the **speaker window**: current and next slide, the script, a timer against the planned minutes, prev/next buttons that drive the deck |
-| `F` | present fullscreen (`Esc` leaves) · `B` blank the screen · `T` light/dark · `P` print to PDF |
+| `S` | open the **speaker window**: current and next slide, the script, a timer against the planned minutes, prev/next buttons that drive the deck. Open it before `F`: a new window leaves fullscreen |
+| `F` | present fullscreen (`Esc` leaves fullscreen in every browser, so overlays close with their own key) · `B` blank the screen · `T` light/dark · `P` print to PDF |
 | `A` · `G` · `?` | timed agenda in any time zone · overview grid · shortcut help |
 
 The speaker window talks to the deck over `postMessage` (it is opened from the deck, so this works even from `file://`), BroadcastChannel and localStorage. Open it from the deck with `S`; a window opened by hand still synchronizes when the deck and the speaker page share an origin (any `http://` host).

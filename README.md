@@ -17,9 +17,9 @@ This repository is the complete delivery kit: the teaching deck, the read-aloud 
 
 `presentation/dist/index.html` is a self-contained teaching web app. Open it in any current browser, from disk or from a static host.
 
-- **Two surfaces, one file.** The audience sees sparse slides. Press **S** to open the **speaker window**: current and next slide, the full script for the slide, a running clock against the planned minutes, and prev/next controls that drive the deck. Nothing from the script is ever rendered on the audience screen.
+- **Two surfaces, one file.** The audience sees sparse slides. Press **S** to open the **speaker window**: current and next slide, the full script for the slide, a running clock against the planned minutes, and prev/next controls that drive the deck. Open it before you press **F**, because opening a window leaves fullscreen. Nothing from the script is ever rendered on the audience screen.
 - **Teaching interactions.** Staged reveals (press Next to build a diagram), a base-permission × visibility grid you can switch live, an authentication decision tree the room can answer, hover-to-trace diagrams, and knowledge-check quizzes with click-to-reveal answers.
-- **Navigation.** **A** opens the timed agenda in any time zone, **G** the overview grid, **F** presents fullscreen, **B** blanks the screen, **T** switches light and dark, **P** prints every slide to a PDF handout, **?** lists every shortcut. Every slide has a stable URL (`#/slide-id`).
+- **Navigation.** **A** opens the timed agenda in any time zone, **G** the overview grid (the same key closes each overlay again, since **Esc** would also leave fullscreen), **F** presents fullscreen, **B** blanks the screen, **T** switches light and dark, **P** prints every slide to a PDF handout, **?** lists every shortcut. Every slide has a stable URL (`#/slide-id`).
 - **Two days, 180 planned minutes each,** in the order of [`docs/AGENDA.md`](docs/AGENDA.md).
 
 The deck is built from Markdown. Slides live in `presentation/content/slides/`, the script in `presentation/content/script/`, diagrams in `presentation/content/diagrams/`, the timed agenda in `presentation/content/agenda.json`. `node presentation/build.mjs` rebuilds both the deck and `presenter/PRESENTER-SCRIPT.md` from the same sources, so they cannot drift apart. See [`presentation/README.md`](presentation/README.md) for the authoring format.
@@ -89,6 +89,7 @@ Instructor materials: [Instructor Guide](docs/INSTRUCTOR-GUIDE.md) · [Knowledge
 npm install                      # once
 node presentation/build.mjs      # rebuild the deck and the presenter script
 node scripts/deck-qa.mjs         # screenshot every slide to presentation/qa/ and flag overflow
+node scripts/deck-live-edge.mjs  # Windows and Edge: rehearse on the real screen (true fullscreen, speaker pop-up) and capture it
 npm test -- --skip-links         # lint, structure, freshness, spelling, coverage, deck checks
 npm run test:links               # slow: every external link
 ```

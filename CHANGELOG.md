@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-10-29 · rehearsed on the real screen
+
+### Added
+- `scripts/deck-live-edge.mjs` with `scripts/win-shot.ps1`: rehearses the deck in the real Microsoft Edge on this desktop and captures the physical screen after every step, in two passes. A plain Edge driven by real key presses shows true fullscreen, the overlays inside it and the speaker pop-up as a real window; an automated Edge covers the steps that need clicks. Captures land in `presentation/qa/real-*.png` and `live-*.png`.
+
+### Changed
+- `G`, `A` and `?` close the overlay they opened. Every browser leaves fullscreen on `Esc`, so a presenter no longer needs it; the help overlay and the docs say so, and they say to open the speaker window before pressing `F`, because opening a window also leaves fullscreen.
+- Hierarchy diagram: the enterprise-team label fits its pill. Speaker notes header keeps its tools on one line.
+
 ## 2026-10-29 · first release of the kit
 
 This repository replaces two earlier sources: the public `gh-abcs-admin` fork (labs, docs, tests) and a PowerPoint-based "GitHub Administration Workshop" deck with its refresh tooling. Nothing customer-specific from either was carried over.

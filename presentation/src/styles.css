@@ -361,8 +361,8 @@ body.print .fragment { opacity: 1; }
 .sp-preview-wrap-small { width: 58%; border-radius: 8px; }
 .sp-notes-wrap { display: grid; grid-template-rows: auto 1fr auto; min-height: 0; }
 .sp-notes-head { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 16px 24px 10px; border-bottom: 1px solid var(--line); }
-.sp-notes-head h2 { margin: 0; font-size: 20px; }
-.sp-notes-tools { display: flex; gap: 8px; align-items: center; font-size: 13px; }
+.sp-notes-head h2 { margin: 0; font-size: 20px; flex: 1 1 auto; min-width: 0; }
+.sp-notes-tools { display: flex; gap: 8px; align-items: center; font-size: 13px; flex: 0 0 auto; white-space: nowrap; }
 .sp-notes { overflow: auto; padding: 20px 28px 40px; font-size: var(--notes-size, 22px); line-height: 1.55; min-height: 0; }
 .sp-notes .say { margin: 0 0 1em; max-width: 60ch; color: var(--text); }
 .sp-notes .cue { margin: 0.4em 0 1em; padding: 10px 16px; border-radius: 10px; background: var(--surface); border-left: 4px solid var(--orange); color: var(--text-2); font-size: 0.9em; max-width: 60ch; }

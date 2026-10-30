@@ -320,7 +320,12 @@
       const tag = (e.target && e.target.tagName) || '';
       if (['INPUT', 'SELECT', 'TEXTAREA'].includes(tag)) return;
       const anyOpen = [dlgHelp, dlgGrid, dlgAgenda].some((d) => d.open);
-      if (anyOpen) { if (e.key === 'Escape') closeDialogs(); return; }
+      if (anyOpen) {
+        // the key that opened an overlay closes it again, so a presenter never needs Esc (Esc also leaves fullscreen in every browser)
+        const k = e.key.toLowerCase();
+        if (e.key === 'Escape' || (k === 'g' && dlgGrid.open) || (k === 'a' && dlgAgenda.open) || ((e.key === '?' || e.key === '/') && dlgHelp.open)) { e.preventDefault(); closeDialogs(); }
+        return;
+      }
       if (e.target && e.target.closest && e.target.closest('.quiz, [data-decision], [data-bp]') && ['Enter', ' '].includes(e.key)) return;
       switch (e.key) {
         case 'ArrowRight': case ' ': case 'PageDown': case 'ArrowDown': e.preventDefault(); next(); break;
