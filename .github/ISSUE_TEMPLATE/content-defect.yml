@@ -1,0 +1,37 @@
+name: Content defect
+description: A lab step, slide or document is wrong, stale or unclear.
+title: "[content] "
+labels: ["training", "content"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where
+      options:
+        - Lab
+        - Deck slide
+        - Speaker script
+        - Reference doc
+        - Tests or tooling
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: File and step or slide id
+      placeholder: labs/lab07.md step 7.2.6, or slide id push-protection
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What is wrong and what is true now
+      description: Cite the GitHub Docs page or changelog post that shows the current behavior.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I checked the date-sensitive claim against docs.github.com or github.blog/changelog
