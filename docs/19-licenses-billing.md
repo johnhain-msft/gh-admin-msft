@@ -725,7 +725,7 @@ The ROI calculation becomes: `(Productivity gains × developer hourly cost) / (S
 
 Since 2026-08-07, the Copilot impact dashboard (enterprise **Insights** → **Copilot impact**, also available for organizations) has a **Potential return on investment** section. Select a compensation band, then compare cost per developer per month (from actual AI Credit consumption), share of payroll and pull requests per month for passive and code-first users (phases 0–1) against agent-first users (phases 2–3). It needs the **Copilot usage metrics** policy and is available to enterprise owners, billing managers, organization owners and custom roles with the `View Copilot Metrics` permission. GitHub presents the figures as directional estimates, not financial results.
 
-### Tracking GitHub Advanced Security via Cost Centers
+### Tracking GitHub Advanced Security (now GitHub Secret Protection and Code Security) via Cost Centers
 
 GHAS — now split into **Secret Protection** and **Code Security** — charges based on **active unique committers** to repositories where the feature is enabled. Like Copilot, GHAS is a license-based product, so cost center allocation is based on the **user** (active committer), not the repository.
 
