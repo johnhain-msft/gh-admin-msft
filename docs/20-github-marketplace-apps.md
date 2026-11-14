@@ -29,7 +29,7 @@ GitHub Apps are the officially recommended way to integrate with GitHub. The doc
 | **Rate Limits** | Scale with number of repos + org users | Fixed 5,000 requests/hour per user |
 | **Enterprise Seats** | App bots do NOT consume a GHEC seat | Machine user accounts DO consume a seat |
 | **Org Policy Scope** | NOT subject to organization OAuth app access restrictions | Subject to OAuth app access restrictions |
-| **Enterprise-Level Access** | Can be installed on the enterprise account with enterprise permissions (third-party apps since 2026-08-07; public preview, partial API coverage) | Can access enterprise-level resources through the authorizing user's token |
+| **Enterprise-Level Access** | Can be installed on the enterprise account with enterprise permissions (third-party apps since 2026-08-07; GA since 2026-10-23, partial API coverage) | Can access enterprise-level resources through the authorizing user's token |
 
 ### Decision Matrix
 
@@ -48,7 +48,7 @@ Use this matrix to determine which app type fits your integration needs:
 
 ### When OAuth Apps Are Still Required
 
-Since 2026-08-07, enterprise owners can install GitHub Apps, including public third-party apps, on the enterprise account itself. An enterprise installation receives only the enterprise permissions the app requests. It gets no access to the enterprise's organizations or repositories (install the app on those separately) and receives no webhooks. Enterprise-installed apps are in public preview, and not every enterprise API supports them yet. The docs list these supported operations:
+Since 2026-08-07, enterprise owners can install GitHub Apps, including public third-party apps, on the enterprise account itself. An enterprise installation receives only the enterprise permissions the app requests. It gets no access to the enterprise's organizations or repositories (install the app on those separately) and receives no webhooks. Enterprise installations became generally available on 2026-10-23, with expanded API coverage (for example enterprise rulesets), but not every enterprise API supports them yet. The docs list these supported operations:
 
 - Creating and listing organizations, managing enterprise users, and calling the enterprise SCIM APIs
 - Creating and managing GitHub App installations in the enterprise's organizations
