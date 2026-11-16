@@ -479,6 +479,8 @@ User-level budgets are generally available since 2026-06-01; cost center user-le
 
 > **Important:** For Copilot AI Credits, only user-level budgets act on the pooled included usage. Enterprise, organization and cost center budgets cap additional usage only after the pool is exhausted. The enterprise budget is therefore not a total monthly budget: with stop-usage enabled, the maximum Copilot bill is license fees plus that budget.
 
+An enterprise account can hold up to 40,000 budgets (raised from 10,000 on 2026-11-16 on github.com and GHE.com), which leaves room for per-user and per-cost-center budgets at scale.
+
 #### Budget Types
 
 | Type | Behavior |
