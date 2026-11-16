@@ -243,6 +243,7 @@ Access to organization-level resources:
 Access to manage an enterprise, used only when the app is installed on the enterprise account. Since 2026-08-07, any user or organization can create a GitHub App with enterprise permissions; to be installed on an enterprise, the app must be public or internal. Enterprise owners see and grant only the enterprise permissions the app requests. Examples:
 
 - The enterprise billing permission — read, or read and write, the enterprise billing REST API: usage, budgets and cost centers (since 2026-08-26)
+- **Enterprise Copilot license management** — lets an enterprise-installed app call the enterprise Copilot seat management APIs to assign seats to users and enterprise teams (since 2026-11-10)
 - **Enterprise credentials** — with write access, authorize existing personal access tokens (classic) and SSH keys for SSO across organizations (since 2026-09-16)
 - **Enterprise organization installations** and **Enterprise organization installation repositories** — manage app installations across the enterprise's organizations; apps that request these can only be installed on the enterprise that owns them
 

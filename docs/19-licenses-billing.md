@@ -597,6 +597,14 @@ gh api \
 
 The request body takes arrays named `users`, `organizations`, `repositories` and `enterprise_teams`. A resource belongs to one cost center at a time, so adding it here moves it from any other cost center, and the response lists those moves in `reassigned_resources`. Use `DELETE` on the same path to remove resources.
 
+To find which cost center a user, organization, repository or enterprise team belongs to (since 2026-11-03), call the membership lookup instead of listing every cost center; an empty `memberships` array means the resource is in none. Enterprise owners, billing managers and GitHub Apps with read access to enterprise billing can look up any resource; organization owners see only what they can already see.
+
+```bash
+gh api \
+  -H "Accept: application/vnd.github+json" \
+  "/enterprises/{enterprise}/settings/billing/cost-centers/memberships?resource_type=organization&name=octo-web"
+```
+
 ### Design Patterns for Cost Center Hierarchies
 
 Choosing the right cost center structure is foundational. An ill-fitting hierarchy creates ongoing friction with finance teams and makes chargeback reports unreliable. The table below summarizes the three most common patterns:
