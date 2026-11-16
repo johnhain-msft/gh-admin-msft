@@ -44,7 +44,7 @@ We start where you have concerns, then walk every tab. Nothing is changed during
 - Enterprise access restrictions; IP allow list incl. EMU namespaces
 - **Credentials**: inventory, CSV export (2026-09-21), bulk revocation
 - Automated SSO authorization; proof of presence (preview)
-- GitHub Apps: enterprise-owned, enterprise installations (preview)
+- GitHub Apps: enterprise-owned, enterprise installations (GA)
 :::card Compliance and the rest
 - **AI controls** (GA 2026-02-26)
 - Billing and licensing · Security & quality · Insights
