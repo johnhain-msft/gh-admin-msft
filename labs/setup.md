@@ -16,7 +16,7 @@ References:
 5. Keep the visibility **Private** and click `Create repository`
 6. Open `YOUR-ORG/gh-admin-msft-[USERNAME]`. This is "your own repository" in the labs that follow.
 
-> **Note:** The workshop repository is private, so `Use this template` only appears once you can read it. If the button is missing, ask your instructor to confirm that your invitation to the workshop organization was accepted.
+> **Note:** Sign in to GitHub so `Use this template` appears. If you cannot select your workshop organization (`YOUR-ORG`) as the **Owner**, ask your instructor to confirm that your organization invitation was accepted.
 
 ## 2. _(Alternative)_ Clone the repository and push it to a new repository
 
